@@ -1,8 +1,8 @@
-export default class Pessoa {
-  #numero
-  #aberta
-  #presente
-  #selecionada
+export default class Porta {
+  #numero: number
+  #aberta: boolean
+  #presente: boolean
+  #selecionada: boolean
 
   constructor(numero, aberta = false, presente = false, selecionada = false) {
     this.#numero = numero
