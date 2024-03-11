@@ -1,4 +1,4 @@
-export default class Porta {
+export default class PortaModel {
   #numero: number
   #aberta: boolean
   #presente: boolean
@@ -29,16 +29,16 @@ export default class Porta {
 
   desselecionar() {
     const selecionada = false
-    return new Porta(this.numero, this.aberta, this.presente, selecionada)
+    return new PortaModel(this.numero, this.aberta, this.presente, selecionada)
   }
 
   alternarSelecao() {
     const selecionada = !this.#selecionada
-    return new Porta(this.numero, this.aberta, this.presente, selecionada)
+    return new PortaModel(this.numero, this.aberta, this.presente, selecionada)
   }
 
   abrir() {
     const aberta = true
-    return new Porta(this.numero, aberta, this.presente, this.selecionada)
+    return new PortaModel(this.numero, aberta, this.presente, this.selecionada)
   }
 }
