@@ -32,8 +32,7 @@ const Porta = (props: PortaProps) => {
   return (
     <div className={styles.area} onClick={alternarSelecao}>
       <div className={` ${styles.estrutura} ${selecionada}`}>
-        {porta.aberta ? false : renderizarPorta()}
-        <Presente />
+        {porta.fechada ? renderizarPorta() : porta.presente ? <Presente /> : false}
       </div>
       <div className={styles.chao}></div>
     </div>

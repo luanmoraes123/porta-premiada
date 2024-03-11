@@ -15,6 +15,10 @@ export default class PortaModel {
     return this.#aberta
   }
 
+  get fechada() {
+    return !this.#aberta
+  }
+
   get numero() {
     return this.#numero
   }
