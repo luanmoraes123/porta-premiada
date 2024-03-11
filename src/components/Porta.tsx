@@ -1,5 +1,6 @@
 import styles from '../styles/Porta.module.css'
 import PortaModel from '../model/PortaModel'
+import Presente from './Presente'
 
 interface PortaProps {
   value: PortaModel
@@ -32,6 +33,7 @@ const Porta = (props: PortaProps) => {
     <div className={styles.area} onClick={alternarSelecao}>
       <div className={` ${styles.estrutura} ${selecionada}`}>
         {porta.aberta ? false : renderizarPorta()}
+        <Presente />
       </div>
       <div className={styles.chao}></div>
     </div>
