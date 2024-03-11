@@ -4,7 +4,7 @@ export default class PortaModel {
   #presente: boolean
   #selecionada: boolean
 
-  constructor(numero, aberta = false, presente = false, selecionada = false) {
+  constructor(numero, presente = false, aberta = false, selecionada = false) {
     this.#numero = numero
     this.#aberta = aberta
     this.#presente = presente

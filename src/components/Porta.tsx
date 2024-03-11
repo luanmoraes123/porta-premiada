@@ -1,7 +1,7 @@
 import styles from '../styles/Porta.module.css'
 import PortaModel from '../model/PortaModel'
 
-interface PortaProps{
+interface PortaProps {
   value: PortaModel
   onChange: (novaPorta: PortaModel) => void
 }
@@ -13,25 +13,25 @@ const Porta = (props: PortaProps) => {
     props.onChange(porta.alternarSelecao())
   }
 
-  const abrir = (e) =>{
+  const abrir = (e) => {
     e.stopPropagation()
-   props.onChange(porta.abrir())
+    props.onChange(porta.abrir())
   }
 
   const renderizarPorta = () => {
     return (
-      
-        <div className={styles.porta}>
-          <div className={styles.numero}>{porta.numero}</div>
-          <div className={styles.macaneta} onClick={abrir}></div>
-        </div>
-      
+
+      <div className={styles.porta}>
+        <div className={styles.numero}>{porta.numero}</div>
+        <div className={styles.macaneta} onClick={abrir}></div>
+      </div>
+
     )
   }
   return (
     <div className={styles.area} onClick={alternarSelecao}>
       <div className={` ${styles.estrutura} ${selecionada}`}>
-      {porta.aberta ? false : renderizarPorta()}
+        {porta.aberta ? false : renderizarPorta()}
       </div>
       <div className={styles.chao}></div>
     </div>

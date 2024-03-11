@@ -2,9 +2,11 @@ import Presente from '../components/Presente'
 import Porta from '../components/Porta'
 import PortaModel from '../model/PortaModel'
 import { useState } from 'react';
+import { criarPortas } from '../functions/portas';
 
 export default function Home() {
   const [p1, setPorta] = useState(new PortaModel(1))
+
   return (
     <div>
       {/* <Presente /> */}
