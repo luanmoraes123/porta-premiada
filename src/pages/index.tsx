@@ -1,10 +1,11 @@
-
+import Cartao from '../components/Cartao'
+import styles from '../styles/home.module.css'
 
 export default function Home() {
 
   return (
-    <div style={{ display: 'flex' }}>
-      <h1>Inicio do jogo</h1>
+    <div className={styles.formulario}>
+      <Cartao />
     </div>
   );
 }
