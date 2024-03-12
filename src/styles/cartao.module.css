@@ -1,5 +1,12 @@
 .cartao {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   height: 300px;
+  padding: 20px;
+}
+
+.cartao h1 {
+  font-size: 4rem;
 }
