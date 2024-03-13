@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import Cartao from '../components/Cartao'
-import styles from '../styles/home.module.css'
+import styles from '../styles/Home.module.css'
+import EntradaNumerica from '../components/EntradaNumerica';
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [qtdePortas, setQtdePortas] = useState(3)
 
   return (
     <div className={styles.formulario}>
@@ -10,7 +14,10 @@ export default function Home() {
         <Cartao bgcolor='#c0392c'>
           <h1>Monty Hall</h1>
         </Cartao>
-        <Cartao></Cartao>
+        <Cartao>
+          <EntradaNumerica text='Qtde portas?'
+            value={qtdePortas} onChange={novaQtde => setQtdePortas(novaQtde)} />
+        </Cartao>
       </div>
       <div>
         <Cartao></Cartao>
